@@ -60,7 +60,7 @@ export default function PublicViewPage() {
     canvas.height = rect.height;
 
     // Render
-    renderScene(ctx, elements, appState, null, null, []);
+    renderScene(canvas, elements, appState, {}, []);
   }, [elements, appState]);
 
   // Handle resize
@@ -76,7 +76,7 @@ export default function PublicViewPage() {
 
       const ctx = canvas.getContext('2d');
       if (ctx) {
-        renderScene(ctx, elements, appState, null, null, []);
+        renderScene(canvas, elements, appState, {}, []);
       }
     };
 
