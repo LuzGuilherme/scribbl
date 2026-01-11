@@ -307,7 +307,7 @@ export default function DrawPage() {
       historyRef.current.push(elements);
       setElements(prev =>
         prev.map(el =>
-          appState.selectedElementIds[el.id] ? { ...el, ...updates } : el
+          appState.selectedElementIds[el.id] ? { ...el, ...updates } as typeof el : el
         )
       );
     },
